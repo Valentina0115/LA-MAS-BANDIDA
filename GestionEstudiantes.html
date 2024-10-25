@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gestion de Estudiantes</h1>
+    <div>
+        <h3>Agregar Estudiante</h3>
+        <label for="nombre">Nombre:
+            <input type="text" id="nombre"  required> 
+        </label>
+        <br><br>
+        <label for="edad">Edad:
+            <input type="number" id="edad" required>
+        </label>
+        <button id="AgregarEstudiante">Agregar Estudiante</button>
+        <br><br>
+        <button id="saludar">saludar</button>
+        <br><br>
+    </div>
+    <div>
+        <h2>Agregar calificacion:</h2>
+        <input type="number" id="calificacion" placeholder="Ingrese calificacion" required>
+        <button id="AgregarCalificacion">Agregar</button>
+    </div>
+    <div>
+        <h2>Mostrar Calificaciones</h2>
+        <ul id="listaCalificaciones"></ul>
+        <button id="MostrarPromedio"> Promedio:</button>
+    </div>
+
+    
+    <p id="Resultado"></p>
+</body>
+<script src="GestionEstudiantes.js"></script>
+</html>

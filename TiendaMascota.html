@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar Mascota</h1>
+
+    <form id="mascota">
+        <label for="ndombre">Nombre de la mascota:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="tipo">Tipo de mascota:</label>
+        <select id="tipo" required>
+            <option value="">Selecciona un tipo</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+        </select><br><br>
+
+        <button id="Agregar" type="button">Agregar Mascota</button>
+    </form>
+
+    <h2>Mascotas Registradas</h2>
+    <ul id="listaM"></ul>
+</body>
+<script src="TiendaMascota.js"></script>
+</html>
