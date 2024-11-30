@@ -13,10 +13,9 @@ class Electrodomestico extends Producto {
     }
 }
 
-// Arreglo para almacenar productos
 let productos = [];
 
-// Agregar producto al hacer clic en el botón
+
 document.querySelector("#agregarProducto").addEventListener("click", function() {
     let nombre = document.querySelector("#nombre").value;
     let precio = parseFloat(document.querySelector("#precio").value);
@@ -25,14 +24,13 @@ document.querySelector("#agregarProducto").addEventListener("click", function() 
 
     let producto;
 
-    // Crear el producto según si se ingresó una marca
+
     if (marca) {
         producto = new Electrodomestico(nombre, precio, cantidadEnStock, marca);
     } else {
         producto = new Producto(nombre, precio, cantidadEnStock);
     }
 
-    // Agregar el producto al arreglo
     productos.push(producto);
 
 

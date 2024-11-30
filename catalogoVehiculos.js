@@ -30,7 +30,6 @@ class Moto extends Vehiculo{
 
 let vehiculos = [];
 
-// Manejador para agregar los vehículos al arreglo sin usar parámetros en la función
 document.querySelector("#vehiculo button").addEventListener("click", function() {
     let marca = document.querySelector("#marca").value;
     let modelo = document.querySelector("#modelo").value;

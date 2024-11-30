@@ -27,10 +27,9 @@ class EmpleadoMedioTiempo extends Empleado {
     }
 }
 
-// Array para almacenar empleados
 let empleados = [];
 
-// Función para mostrar la lista de empleados y sus sueldos
+
 function mostrarSueldos() {
     let lista = document.getElementById("listaEmpleados");
     lista.innerHTML = ''; 

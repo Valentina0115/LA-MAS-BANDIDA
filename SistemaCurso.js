@@ -59,7 +59,7 @@ class CursoPresencial extends Curso {
     }
 }
 
-// Variables globales
+
 let estudiante;
 let curso;
 
@@ -67,12 +67,11 @@ document.querySelector("#AgregarEstudiante").addEventListener("click", function(
     let nombre = document.querySelector("#nombre").value;
     let edad = document.querySelector("#edad").value;
 
-    // Crear la instancia del Estudiante
+
     estudiante = new Estudiante(nombre, edad);
 
     document.querySelector("#Resultado").textContent = `Estudiante ${nombre}, Edad: ${edad} agregado.`;
 
-    // Limpiar los campos de entrada
     document.querySelector("#nombre").value = "";
     document.querySelector("#edad").value = "";
 });
@@ -80,7 +79,6 @@ document.querySelector("#AgregarEstudiante").addEventListener("click", function(
 document.querySelector("#AgregarCurso").addEventListener("click", function() {
     let tipoCurso = document.querySelector("#tipoCurso").value;
 
-    // Crear la instancia del curso según el tipo seleccionado
     if (tipoCurso === "online") {
         curso = new CursoOnline();
     } else {
@@ -109,7 +107,6 @@ document.querySelector("#AgregarCalificacion").addEventListener("click", functio
         document.querySelector("#Resultado").textContent = "Primero agregue un estudiante.";
     }
 
-    // Limpiar el campo de calificación y actualizar la lista
     document.querySelector("#calificacion").value = "";
     actualizarListaCalificaciones();
 });
@@ -125,7 +122,7 @@ document.querySelector("#MostrarPromedio").addEventListener("click", function() 
 
 function actualizarListaCalificaciones() {
     let lista = document.querySelector("#listaCalificaciones"); 
-    lista.innerHTML = ""; // Limpiar la lista antes de actualizar
+    lista.innerHTML = ""; 
 
     estudiante.listarCalificaciones().forEach(function(calificacion) {
         let li = document.createElement("li");

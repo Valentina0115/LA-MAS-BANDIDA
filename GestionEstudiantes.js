@@ -67,7 +67,7 @@ class CursoPresencial extends Curso {
     }
 }
 
-// Variables globales
+
 let estudiante;
 let curso;
 
@@ -75,12 +75,12 @@ document.querySelector("#AgregarEstudiante").addEventListener("click", function(
     let nombre = document.querySelector("#nombre").value;
     let edad = document.querySelector("#edad").value;
 
-    // Crear la instancia del Estudiante
+
     estudiante = new Estudiante(nombre, edad);
 
     document.querySelector("#Resultado").textContent = `Estudiante ${nombre}, Edad: ${edad} agregado.`;
 
-    // Limpiar los campos de entrada
+  
     document.querySelector("#nombre").value = "";
     document.querySelector("#edad").value = "";
 });
@@ -88,7 +88,7 @@ document.querySelector("#AgregarEstudiante").addEventListener("click", function(
 document.querySelector("#AgregarCurso").addEventListener("click", function() {
     let tipoCurso = document.querySelector("#tipoCurso").value;
 
-    // Crear la instancia del curso según el tipo seleccionado
+
     if (tipoCurso === "online") {
         curso = new CursoOnline();
     } else {

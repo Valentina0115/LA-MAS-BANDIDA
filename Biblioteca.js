@@ -81,7 +81,6 @@ function buscarLibrosAutor(autorBuscado) {
     }
 }
 
-// Evento para buscar libros por autor
 document.querySelector("#buscarA").addEventListener('click', function() {
     let autorBuscado = document.querySelector("#buscarAutor").value;
     buscarLibrosAutor(autorBuscado);

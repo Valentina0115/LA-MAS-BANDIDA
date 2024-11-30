@@ -1,4 +1,4 @@
-// Clase base Mascota
+
 class Mascota {
     constructor(nombre, tipo) {
         this.nombre = nombre;
@@ -14,7 +14,7 @@ class Mascota {
     }
 }
 
-// Clase derivada Perro
+
 class Perro extends Mascota {
     constructor(nombre) {
         super(nombre, 'Perro');  
@@ -25,11 +25,10 @@ class Perro extends Mascota {
     }
 
     hacerAccion() {
-        return this.ladrar();  // Aquí devolvemos el resultado de ladrar()
+        return this.ladrar();  
     }
 }
 
-// Clase derivada Gato
 class Gato extends Mascota {
     constructor(nombre) {
         super(nombre, 'Gato');  
@@ -40,35 +39,31 @@ class Gato extends Mascota {
     }
 
     hacerAccion() {
-        return this.maullar();  // Aquí devolvemos el resultado de maullar()
+        return this.maullar();  
     }
 }
 
 let mascotas = [];
 
-// Evento para agregar mascotas
 document.querySelector('#Agregar').addEventListener('click', function() {
-    // Asegúrate de que el id en el HTML sea "nombre", en minúsculas
     let nombre = document.querySelector('#nombre').value;
-    let tipoP = document.querySelector('#tipo').value;  // Capturamos el valor como cadena (Perro o Gato)
-    
+    let tipoP = document.querySelector('#tipo').value;  
     let mascota;
 
-    // Comparación correcta de cadenas (no como número)
     if (tipoP === 'Perro') {
        mascota = new Perro(nombre);
     } else if (tipoP === 'Gato') {
       mascota = new Gato(nombre);
     }
 
-    // Si se ha creado una mascota, se agrega al array
+
     if (mascota) {
         mascotas.push(mascota);
         actualizarLista();
     }
 })
 
-// Función para actualizar la lista de mascotas
+
 function actualizarLista(){
     let lista = document.querySelector("#listaM");
 
@@ -76,6 +71,6 @@ function actualizarLista(){
         let li = document.createElement('li');
         li.textContent= `${mascota.nombre}, ${mascota.tipo} - ${mascota.hacerAccion()}`;
 
-        lista.appendChild(li);  // Añadimos el li a la lista, no a sí mismo
+        lista.appendChild(li);  
     });
 }
